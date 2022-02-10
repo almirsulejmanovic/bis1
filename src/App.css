@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+	flex-wrap: nowrap;
+}
+
+.col1 {
+  flex-grow: 1;
+	width: 33%;
+  border: black 2px solid;
+  border-right: 0;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  animation: animate-col1 2s infinite alternate-reverse;
+}
+
+.col2 {
+  flex-grow: 1;
+	width: 33%;
+  border: black 2px solid;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.col2-animation {
+  animation: animate-col2 4s infinite;
+}
+
+.col3 {
+  flex-grow: 1;
+	width: 33%;
+  border: black 2px solid;
+  border-left: 0;
+  background-color: blue;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.col3-animation {
+  animation: animate-col3 3s infinite;
+}
+
+
+@keyframes animate-col1 {
+  from {
+    background-color: blue;
+    color: white;
+  }
+  to {
+    background-color: #FFCB00;
+    color: black;
+  }
+}
+
+@keyframes animate-col2 {
+  100% { 
+    transform:rotate(360deg); 
+  } 
+}
+
+@keyframes animate-col3 {
+  0% {
+    transform: translateY(0);
+    color: black;
+  }
+  20% {
+    transform: translateY(200px);
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  80% {
+    transform: translateY(-200px);
+    color: white;
+  }
+  100% {
+    transform: translateY(0);
+    color: black;
+  }
+}
